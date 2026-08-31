@@ -1,0 +1,4 @@
+import { Layout, PageHero, SectionTitle } from "../components";
+const people=[["team-1.jpg","Walter White","Managing Partner"],["team-2.jpg","Sarah Johnson","Audit Partner"],["team-3.jpg","William Anderson","Tax & Advisory Manager"],["team-4.jpg","Amanda Jepson","Senior Accountant"]];
+export default function Team(){return <Layout><PageHero title="Our Team" text="Seasoned professionals committed to accurate work and dependable advice."/><section className="section"><SectionTitle eyebrow="Our People" title="Expertise with a personal approach" text="Meet the professionals responsible for maintaining our standards of integrity, independence and client care."/><div className="team-grid">{people.map(([image,name,role])=><article key={name}><img src={`/team/${image}`} alt={name}/><div><h3>{name}</h3><p>{role}</p><span>in</span></div></article>)}</div></section></Layout>}
+
