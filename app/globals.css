@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root{
+    --font-sans: Arial, Helvetica, sans-serif;
+    --font-heading: "Trebuchet MS", Arial, sans-serif;
     --blue:#003366;
     --blue-2:#07294b;
     --red:#c41e3a;
