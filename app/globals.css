@@ -399,3 +399,41 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #d68b98; outli
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Full CFA navbar logo */
+.header .header-inner {
+  gap: 24px;
+}
+
+.header .navbar-brand {
+  display: flex;
+  align-items: center;
+  flex: 0 1 420px;
+  min-width: 0;
+}
+
+.header .navbar-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header .desktop-nav,
+.header .mobile-nav {
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .header .header-inner {
+    gap: 12px;
+  }
+
+  .header .navbar-brand {
+    flex-basis: 340px;
+  }
+
+  .header .mobile-nav summary {
+    padding: 10px;
+    white-space: nowrap;
+  }
+}

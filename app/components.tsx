@@ -37,10 +37,13 @@ export function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link href="/" className="logo">
-          CFA <span>&</span> Associates
-          <small>Chartered Accountants</small>
-        </Link>
+        <Link href="/" className="navbar-brand" aria-label="CFA & Associates home">
+  <img
+    src="/cfa-logo.png"
+    alt="CFA & Associates — Chartered Accountants"
+    className="navbar-logo"
+  />
+</Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/">Home</Link>
           <div className="nav-dropdown">
@@ -78,10 +81,13 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div>
-          <Link href="/" className="logo light">
-            CFA <span>&</span> Associates
-            <small>Chartered Accountants</small>
-          </Link>
+          <Link href="/" className="navbar-brand" aria-label="CFA & Associates home">
+  <img
+    src="/favicon.png"
+    alt="CFA & Associates — Chartered Accountants"
+    className="navbar-logo"
+  />
+</Link>
           <p>
             Professional audit, accounting, tax and advisory services delivered
             with integrity, drawing on roots dating back to 1967.
