@@ -1,3 +1,66 @@
-import Link from "next/link";import { Layout, PageHero, SectionTitle, ServiceGrid } from "../components";
-export default function Services(){return <Layout><PageHero title="Our Services" text="Practical financial expertise for compliance, control and sustainable growth."/><section className="section"><SectionTitle eyebrow="Professional Solutions" title="How we support your business" text="Every engagement is handled with care, independence and a clear understanding of your organisation."/><ServiceGrid/></section><section className="process section pale"><SectionTitle eyebrow="Our Approach" title="A clear, dependable process"/><div className="process-grid"><article><b>01</b><h3>Understand</h3><p>We listen carefully and define the scope, priorities and risks.</p></article><article><b>02</b><h3>Examine</h3><p>Our team reviews the relevant records, processes and obligations.</p></article><article><b>03</b><h3>Advise</h3><p>We present clear findings and practical recommendations.</p></article><article><b>04</b><h3>Support</h3><p>We remain available as your organisation implements the next steps.</p></article></div></section><section className="cta"><div><span>Need a tailored service?</span><h2>Let&apos;s discuss your organisation&apos;s needs.</h2></div><Link className="btn white" href="/contact">Request a Consultation</Link></section></Layout>}
+import Link from "next/link";
+import { Layout, PageHero, SectionTitle, ServiceGrid } from "../components";
+
+export default function Services() {
+  return (
+    <Layout>
+      <PageHero
+        title="Our Services"
+        text="Practical financial expertise for compliance, control and sustainable growth."
+      />
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="Professional Solutions"
+          title="How we support your business"
+          text="Every engagement is handled with care, independence and a clear understanding of your organisation."
+        />
+        <ServiceGrid />
+      </section>
+
+      <section className="process section pale">
+        <SectionTitle
+          eyebrow="Our Approach"
+          title="A clear, dependable process"
+        />
+        <div className="process-grid">
+          <article>
+            <b>01</b>
+            <h3>Understand</h3>
+            <p>We listen carefully and define the scope, priorities and risks.</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>Examine</h3>
+            <p>
+              Our team reviews the relevant records, processes and obligations.
+            </p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>Advise</h3>
+            <p>We present clear findings and practical recommendations.</p>
+          </article>
+          <article>
+            <b>04</b>
+            <h3>Support</h3>
+            <p>
+              We remain available as your organisation implements the next steps.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="cta">
+        <div>
+          <span>Need a tailored service?</span>
+          <h2>Let&apos;s discuss your organisation&apos;s needs.</h2>
+        </div>
+        <Link className="btn white" href="/contact">
+          Request a Consultation
+        </Link>
+      </section>
+    </Layout>
+  );
+}
 

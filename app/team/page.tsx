@@ -1,4 +1,12 @@
+import Link from "next/link";
 import { Layout, PageHero, SectionTitle } from "../components";
-const people=[["team-1.jpg","Walter White","Managing Partner"],["team-2.jpg","Sarah Johnson","Audit Partner"],["team-3.jpg","William Anderson","Tax & Advisory Manager"],["team-4.jpg","Amanda Jepson","Senior Accountant"]];
-export default function Team(){return <Layout><PageHero title="Our Team" text="Seasoned professionals committed to accurate work and dependable advice."/><section className="section"><SectionTitle eyebrow="Our People" title="Expertise with a personal approach" text="Meet the professionals responsible for maintaining our standards of integrity, independence and client care."/><div className="team-grid">{people.map(([image,name,role])=><article key={name}><img src={`/team/${image}`} alt={name}/><div><h3>{name}</h3><p>{role}</p><span>in</span></div></article>)}</div></section></Layout>}
-
+import { people } from "./people";
+export default function Team() {
+ return <Layout><PageHero title="Our Team" text="Meet the professionals behind our audit, accounting and advisory work." />
+ <section className="section"><SectionTitle eyebrow="Our People" title="Experience. Care. Professional judgement." text="Explore our team’s qualifications, specialist knowledge and approach to their work." />
+ <div className="team-grid">{people.map(person=><article key={person.slug}>
+ <div className="team-monogram" aria-hidden="true">{person.initials}</div>
+ <div><h3>{person.name}</h3><p>{person.role}</p><p className="team-summary">{person.summary}</p>
+ <Link className="profile-link" href={`/team/${person.slug}`} aria-label={`Read ${person.name}'s profile`}>View profile →</Link></div>
+ </article>)}</div></section></Layout>;
+}

@@ -1,4 +1,67 @@
-import Link from "next/link";import { Layout, PageHero, SectionTitle } from "../components";
-const posts=[["blog-1.jpg","Tax & Compliance","Preparing your business for a stronger financial year"],["blog-2.jpg","Business Advisory","Five financial controls every growing business needs"],["blog-3.jpg","Audit & Assurance","What to expect from a modern external audit"],["blog-4.jpg","Bookkeeping","Why accurate monthly records matter"],["blog-5.jpg","Risk Management","Protecting your organisation from financial irregularities"],["blog-6.jpg","Corporate Tax","Common filing mistakes businesses should avoid"]];
-export default function Blog(){return <Layout><PageHero title="Blog" text="Practical insight on audit, tax, compliance and better financial management."/><section className="section"><SectionTitle eyebrow="Latest Insights" title="Knowledge for better decisions"/><div className="blog-grid">{posts.map(([image,category,title],i)=><article key={title}><img src={`/blog/${image}`} alt=""/><div><span>{category}</span><h3>{title}</h3><p>Clear, practical guidance from the CFA & Associates team to help your organisation plan and operate with confidence.</p><small>August {8-i}, 2026</small><Link href="/contact">Read Article →</Link></div></article>)}</div></section></Layout>}
+import Link from "next/link";
+import { Layout, PageHero, SectionTitle } from "../components";
+
+const posts = [
+  [
+    "blog-1.jpg",
+    "Tax & Compliance",
+    "Preparing your business for a stronger financial year",
+  ],
+  [
+    "blog-2.jpg",
+    "Business Advisory",
+    "Five financial controls every growing business needs",
+  ],
+  [
+    "blog-3.jpg",
+    "Audit & Assurance",
+    "What to expect from a modern external audit",
+  ],
+  ["blog-4.jpg", "Bookkeeping", "Why accurate monthly records matter"],
+  [
+    "blog-5.jpg",
+    "Risk Management",
+    "Protecting your organisation from financial irregularities",
+  ],
+  [
+    "blog-6.jpg",
+    "Corporate Tax",
+    "Common filing mistakes businesses should avoid",
+  ],
+];
+
+export default function Blog() {
+  return (
+    <Layout>
+      <PageHero
+        title="Blog"
+        text="Practical insight on audit, tax, compliance and better financial management."
+      />
+
+      <section className="section">
+        <SectionTitle
+          eyebrow="Latest Insights"
+          title="Knowledge for better decisions"
+        />
+        <div className="blog-grid">
+          {posts.map(([image, category, title], i) => (
+            <article key={title}>
+              <img src={`/blog/${image}`} alt="" />
+              <div>
+                <span>{category}</span>
+                <h3>{title}</h3>
+                <p>
+                  Clear, practical guidance from the CFA & Associates team to
+                  help your organisation plan and operate with confidence.
+                </p>
+                <small>August {8 - i}, 2026</small>
+                <Link href="/contact">Read Article →</Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </Layout>
+  );
+}
 
